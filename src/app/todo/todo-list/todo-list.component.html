@@ -1,0 +1,24 @@
+<p>todo-list works!</p>
+
+<table border="2" width="70%" align="center">
+  <tr>
+    <th>sr no</th>
+    <th>Subject</th>
+    <th>Description</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let todo of todoList;let index = index;">
+    <td>
+      {{index+1}}
+    </td>
+    <td>
+      {{todo.subject}}
+    </td>
+    <td>
+      {{todo.description}}
+    </td>
+    <td>
+     <button (click)="handleClick(todo)">Click me</button>
+    </td>
+  </tr>
+</table>
